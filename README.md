@@ -3,6 +3,7 @@
 The current way of handling runtime permissions in Android is error prone and needs a lot of boilerplate code.
 Permission Activity makes it easy to handle runtime permissions using Higher order functions and by maintaining a map of your permissions to actions.
 To use it, all you need to do is to inherit the PermissionActivity class and then call requestPermission(permission = permission in form of array, action = { }).
+The library contains a single Activity and nothing else and hence, it will add almost negligible amount of size to your app.
 
 
 ## How to use:
@@ -43,12 +44,17 @@ class MainActivity : PermissionActivity() {
         }
     }
 }
+
 ```
 
 That's it!
 
 ## Logging
 Following are the logs provided by the library:
-``` D/PermissionActivity: CAMERA: Requesting permission ```
-``` D/PermissionActivity: CAMERA: Permission granted ```
-``` D/PermissionActivity: CAMERA: Permission denied ```
+```
+ D/PermissionActivity: CAMERA: Requesting permission 
+ D/PermissionActivity: CAMERA: Permission granted 
+ D/PermissionActivity: CAMERA: Permission denied
+ ```
+
+
