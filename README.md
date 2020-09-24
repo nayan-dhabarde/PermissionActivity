@@ -8,24 +8,24 @@ To use it, all you need to do is to inherit the PermissionActivity class and the
 ## How to use:
 1. Add jitpack io to project level build.gradle file:
 
-`
+```Groovy
     allprojects {
 		repositories {
 			...
 			maven { url 'https://jitpack.io' }
 		}
     }
-`
+```
 
 2. Add Permission activity dependency in app level build.gradle file:
 
-`
+```Groovy
     implementation 'com.github.ndhabrde11:PersmissionActivity:1.0.0'
-`
+```
 
 
 ## Sample code:
-`
+```kotlin
 class MainActivity : PermissionActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +43,12 @@ class MainActivity : PermissionActivity() {
         }
     }
 }
-`
+```
 
 That's it!
+
+## Logging
+Following are the logs provided by the library:
+``` D/PermissionActivity: CAMERA: Requesting permission ```
+``` D/PermissionActivity: CAMERA: Permission granted ```
+``` D/PermissionActivity: CAMERA: Permission denied ```
